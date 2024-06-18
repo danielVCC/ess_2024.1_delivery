@@ -43,6 +43,9 @@ export const getUserOrders = async (req: Request, res: Response): Promise<void> 
   try {
     const user = getUser(req.params.userId);
     const orders = user.orders || [];
+    if(orders.length == 0) {
+      res.status(200).json({ message: "não há pedidos registrados para o perfil" })
+    }
     res.status(200).json(orders);
   } catch (error: any) {
     console.log("Error in getUserOrders:", error.message);

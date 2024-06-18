@@ -59,6 +59,13 @@
             "total": 49.99
             }
         ]
+    },
+    {
+        "id": 3,
+        "name": "Pedro Barbosa",
+        "email": "pedro.barbosa@example.com",
+        "password": "senha789",
+        "orders": []
     }
 ]
   
